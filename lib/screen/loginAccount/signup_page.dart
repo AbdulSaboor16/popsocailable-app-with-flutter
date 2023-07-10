@@ -2,24 +2,27 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:socialapp/screen/loginAccount/signup_page.dart';
+import 'package:socialapp/controller/splash_controller.dart';
 import 'package:socialapp/utils/color_constant.dart';
 import 'package:socialapp/utils/customtextfeild.dart';
+import 'package:socialapp/utils/apple_login_button.dart';
+import 'package:socialapp/utils/google_login_button.dart';
 import 'package:socialapp/utils/textfont_constant.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatelessWidget {
+  const SignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-
+    final controller = Get.put(CheckboxController());
     return ColorfulSafeArea(
       color: ColorConstant.blueColor,
       child: Scaffold(
         backgroundColor: ColorConstant.blueColor,
         body: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 children: [
@@ -41,10 +44,10 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                     height: 38,
-                    width: 80,
+                    width: 100,
                     margin: const EdgeInsets.only(left: 21),
                     child: Text(
-                      "Log In",
+                      "Sign Up",
                       style:
                           GoogleFonts.poppins(textStyle: TextFontConstant.text),
                     ),
@@ -59,7 +62,6 @@ class LoginPage extends StatelessWidget {
                   Container(
                       height: 50,
                       width: Get.width * .9,
-                      // color: Colors.amber,
                       margin: const EdgeInsets.only(left: 21, right: 20),
                       child: const CustomTextFieldEmail(
                         hintText: 'Email',
@@ -73,14 +75,12 @@ class LoginPage extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                      height: 50,
-                      width: Get.width * .9,
-                      // color: Colors.amber,
-                      margin: const EdgeInsets.only(left: 21, right: 20),
-                      child: const CustomTextFieldPassword(
-                        hintText: 'Password',
-                        labelText: "Enter Password",
-                      ))
+                    height: 50,
+                    width: Get.width * .9,
+                    margin: const EdgeInsets.only(left: 21, right: 20),
+                    child: const CustomTextFieldPassword(
+                        hintText: 'Password', labelText: "Enter Password"),
+                  )
                 ],
               ),
               const SizedBox(
@@ -88,31 +88,26 @@ class LoginPage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                        // ignore: sort_child_properties_last
-                        child: Center(
-                            child: Text("Continue",
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.poppins(
-                                    textStyle:
-                                        TextFontConstant.logintextbutton))),
-                        height: 50,
-                        width: Get.width * .9,
-                        margin: const EdgeInsets.only(left: 21, right: 20),
-                        decoration: BoxDecoration(
-                          
-                          gradient: const LinearGradient(
-                            colors: [
-                              ColorConstant.lightyellColor,
-                              ColorConstant.darkyellColor
-                            ], // Replace with your desired gradient colors
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                          ),
-                          borderRadius: BorderRadius.circular(5.0),
+                  Container(
+                    height: 50,
+                    width: Get.width * .9,
+                    margin: const EdgeInsets.only(left: 21, right: 20),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        gradient: const LinearGradient(
+                          colors: [
+                            ColorConstant.lightyellColor,
+                            ColorConstant.darkyellColor,
+                          ],
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
                         )),
+                    child: Center(
+                      child: Text("Continue",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                              textStyle: TextFontConstant.logintextbutton)),
+                    ),
                   )
                 ],
               ),
@@ -152,92 +147,69 @@ class LoginPage extends StatelessWidget {
                 height: 40,
               ),
               Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 44,
-                      width: Get.width * .9,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        border: Border.all(
-                            width: 1, color: ColorConstant.whiteColor),
-                      ),
-                      margin: const EdgeInsets.only(left: 20.0, right: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 24,
-                            width: 24,
-                            // color: Colors.pink,
-                            margin: const EdgeInsets.only(
-                              left: 20.0,
-                            ),
-                            child: Image.asset("assets/images/google.png"),
-                          ),
-                          SizedBox(
-                            height: 24,
-                            width: 200,
-                            // color: Color.fromARGB(255, 173, 159, 164),
-                            child: Center(
-                                child: Text("Continue with Google",
-                                    style: GoogleFonts.poppins(
-                                        textStyle:
-                                            TextFontConstant.logintextbutton))),
-                          )
-                        ],
-                      ),
-                    ),
-                  )
-                ],
+                children: const [GoogleLoginButton()],
               ),
               const SizedBox(
                 height: 25,
               ),
               Row(
+                children: const [AppleLoginButton()],
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              Row(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
-                      height: 44,
-                      width: Get.width * .9,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        border: Border.all(
-                            width: 1, color: ColorConstant.whiteColor),
-                      ),
-                      margin: const EdgeInsets.only(left: 20.0, right: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 24,
-                            width: 24,
-                            // color: Colors.pink,
-                            margin: const EdgeInsets.only(
-                              left: 20.0,
+                  Container(
+                    height: 50,
+                    width: Get.width * .9,
+                    margin: const EdgeInsets.only(left: 21, right: 20),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              height: 40,
+                              width: Get.width * .1,
+                              child: Obx(
+                                () => Checkbox(
+                                  side: const BorderSide(
+                                      width: 2,
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                  checkColor: ColorConstant.whiteColor,
+                                  activeColor: ColorConstant.greyColor,
+                                  value: controller.isChecked.value,
+                                  onChanged: (value) =>
+                                      controller.isChecked.toggle(),
+                                ),
+                              ),
                             ),
-                            child: Image.asset("assets/images/apple.png"),
-                          ),
-                          SizedBox(
-                            height: 24,
-                            width: 200,
-                            // color: Color.fromARGB(255, 173, 159, 164),
-                            child: Center(
-                                child: Text("Continue with Apple",
-                                    style: GoogleFonts.poppins(
-                                        textStyle:
-                                            TextFontConstant.logintextbutton))),
-                          )
-                        ],
-                      ),
+                            Container(
+                              height: 40,
+                              width: Get.width * .7,
+                              margin: const EdgeInsets.only(
+                                left: 10,
+                              ),
+                              alignment: Alignment.center,
+                              child: Center(
+                                child: Text(
+                                  'Yes, I understand and agree to the Terms of Service and Privacy Policy .',
+                                  style: GoogleFonts.poppins(
+                                      fontSize: 14,
+                                      color: ColorConstant.whiteColor),
+                                ),
+                              ),
+                            )
+                          ],
+                        )
+                      ],
                     ),
                   )
                 ],
               ),
               const SizedBox(
-                height: 40,
+                height: 30,
               ),
               Row(
                 children: [
@@ -258,7 +230,7 @@ class LoginPage extends StatelessWidget {
                             width: Get.width * .4,
                             child: Center(
                                 child: FittedBox(
-                              child: Text("Don't have any account?",
+                              child: Text("Already have an account?",
                                   style: GoogleFonts.poppins(
                                       textStyle:
                                           TextFontConstant.logintextbutton)),
@@ -301,7 +273,7 @@ class LoginPage extends StatelessWidget {
                               width: 160,
                               child: Center(
                                   child: Text(
-                                "Sign Up",
+                                "Log In",
                                 style: GoogleFonts.poppins(
                                     textStyle:
                                         TextFontConstant.logintextbutton),
@@ -313,7 +285,8 @@ class LoginPage extends StatelessWidget {
                     ),
                   )
                 ],
-              )
+              ),
+             const SizedBox(height: 20,)
             ],
           ),
         ),

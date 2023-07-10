@@ -10,3 +10,8 @@ class SplashController extends GetxController {
         const Duration(seconds: 2), () => Get.offAll(() => const LoginPage()));
   }
 }
+
+
+class CheckboxController extends GetxController {
+  var isChecked = false.obs;
+}
