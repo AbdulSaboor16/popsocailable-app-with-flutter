@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:socialapp/controller/splash_controller.dart';
+import 'package:socialapp/home_page.dart';
 import 'package:socialapp/utils/color_constant.dart';
 import 'package:socialapp/utils/customtextfeild.dart';
 import 'package:socialapp/utils/apple_login_button.dart';
@@ -266,7 +267,7 @@ class SignupPage extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Get.to(() => const SignupPage());
+                              Get.to(() => const StoryApp());
                             },
                             child: SizedBox(
                               height: 24,

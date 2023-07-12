@@ -38,6 +38,10 @@ dependencies:
   get: ^4.6.5
   colorful_safe_area: ^1.0.0
   google_fonts: ^4.0.4
+  story_view: ^0.14.0
+
+
+  
 
 dev_dependencies:
   flutter_test:
