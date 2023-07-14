@@ -12,4 +12,14 @@ class TextFontConstant {
       fontSize: 14,
       color: ColorConstant.whiteColor,
       );
+
+      static const goodbutton = TextStyle(
+      fontSize: 16,
+      color: ColorConstant.whiteColor,
+      );
+      
+      static const timelinetext = TextStyle(
+      fontSize: 12,
+      color: ColorConstant.whiteColor,
+      );
 }

@@ -38,7 +38,7 @@ Widget storyButton(StoryData story, BuildContext context) {
                     width: 100,
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: NetworkImage(story.storybacUrl),
+                            image: AssetImage(story.storybacUrl),
                             fit: BoxFit.cover),
                         color: Colors.amber,
                         borderRadius: BorderRadius.circular(10)),
