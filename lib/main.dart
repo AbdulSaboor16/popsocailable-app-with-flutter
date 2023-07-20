@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:socialapp/home_page.dart';
 import 'package:socialapp/screen/splash_screen.dart';
+
+import 'bottomtabbarfolder/box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-        debugShowCheckedModeBanner: false, home: StoryApp());
+    return  GetMaterialApp(
+        debugShowCheckedModeBanner: false, home: BoxPage());
   }
 }

@@ -2,6 +2,7 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:socialapp/bottomtabbarfolder/box.dart';
 import 'package:socialapp/controller/splash_controller.dart';
 import 'package:socialapp/home_page.dart';
 import 'package:socialapp/utils/color_constant.dart';
@@ -249,42 +250,27 @@ class SignupPage extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              Row(
+             Row(
                 children: [
-                  GestureDetector(
-                    onTap: () {},
-                    child: Container(
+                  Container(
                       height: 44,
                       width: Get.width * .9,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        border: Border.all(
-                            width: 1, color: ColorConstant.whiteColor),
-                      ),
-                      margin: const EdgeInsets.only(left: 21.0, right: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Get.to(() => const StoryApp());
-                            },
-                            child: SizedBox(
-                              height: 24,
-                              width: 160,
-                              child: Center(
-                                  child: Text(
-                                "Log In",
-                                style: GoogleFonts.poppins(
-                                    textStyle:
-                                        TextFontConstant.logintextbutton),
-                              )),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  )
+                      margin: EdgeInsets.only(left: 21, right: 20),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Get.to(() => BoxPage());
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: ColorConstant.blueColor,
+                          side: const BorderSide(
+                              color: ColorConstant.whiteColor, width: 1),
+                        ),
+                        child: Text(
+                          "Sign Up",
+                          style: GoogleFonts.poppins(
+                              textStyle: TextFontConstant.logintextbutton),
+                        ),
+                      ))
                 ],
               ),
              const SizedBox(height: 20,)
