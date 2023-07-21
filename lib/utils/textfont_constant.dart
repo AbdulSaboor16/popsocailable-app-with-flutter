@@ -22,4 +22,14 @@ class TextFontConstant {
       fontSize: 12,
       color: ColorConstant.whiteColor,
       );
+      static const textss = TextStyle(
+      fontSize: 22,
+      fontWeight: FontWeight.w600,
+      color: ColorConstant.whiteColor,
+      );
+      static const scantext = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
+      color: ColorConstant.whiteColor,
+      );
 }

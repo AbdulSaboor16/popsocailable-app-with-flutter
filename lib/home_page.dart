@@ -50,7 +50,9 @@ class _StoryAppState extends State<StoryApp> {
         child: Scaffold(
             backgroundColor: ColorConstant.blueColor,
             body: Column(children: [
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Row(
                 children: [
                   Container(
@@ -160,7 +162,7 @@ class _StoryAppState extends State<StoryApp> {
                                       // color: Colors.amber,
                                       decoration: BoxDecoration(
                                           color: Colors.grey.withOpacity(0.2),
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                               topLeft: Radius.circular(10),
                                               topRight: Radius.circular(10))),
                                       child: Row(
@@ -187,7 +189,8 @@ class _StoryAppState extends State<StoryApp> {
                                                         Alignment.centerLeft,
                                                     child: Padding(
                                                         padding:
-                                                            EdgeInsets.only(
+                                                            const EdgeInsets
+                                                                    .only(
                                                                 left: 10,
                                                                 top: 8),
                                                         child: Text(
