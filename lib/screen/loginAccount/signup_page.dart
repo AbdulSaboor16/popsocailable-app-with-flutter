@@ -258,7 +258,7 @@ class SignupPage extends StatelessWidget {
                       margin: EdgeInsets.only(left: 21, right: 20),
                       child: ElevatedButton(
                         onPressed: () {
-                          Get.to(() => BoxPage());
+                          Get.to(() => BottomsNavigation());
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: ColorConstant.blueColor,

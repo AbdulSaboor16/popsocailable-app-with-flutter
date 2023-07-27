@@ -27,7 +27,7 @@ class ScannerPage extends StatelessWidget {
                 highlightColor: Colors.transparent,
                 hoverColor: Colors.transparent,
                 onPressed: () {
-                     Get.offAll(() => BoxPage());
+                     Get.offAll(() => BottomsNavigation());
                 },
                 icon: Container(
                   height: 40,

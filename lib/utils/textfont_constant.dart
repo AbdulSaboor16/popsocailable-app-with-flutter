@@ -32,4 +32,9 @@ class TextFontConstant {
       fontWeight: FontWeight.w600,
       color: ColorConstant.whiteColor,
       );
+
+      static const menutext = TextStyle(
+      fontSize: 20,
+      color: ColorConstant.whiteColor,
+      );
 }
