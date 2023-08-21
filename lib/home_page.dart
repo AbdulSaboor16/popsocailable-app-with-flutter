@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_widget_cache.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:socialapp/components/storybtn.dart';
 import 'package:socialapp/data/story_data.dart';
@@ -50,7 +49,7 @@ class _StoryAppState extends State<StoryApp> {
         child: Scaffold(
             backgroundColor: ColorConstant.blueColor,
             body: Column(children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -58,7 +57,7 @@ class _StoryAppState extends State<StoryApp> {
                   Container(
                     height: 50,
                     width: Get.width * .9,
-                    margin: EdgeInsets.only(left: 21, right: 20),
+                    margin:const EdgeInsets.only(left: 21, right: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -126,7 +125,7 @@ class _StoryAppState extends State<StoryApp> {
                   )
                 ],
               ),
-              Container(
+              SizedBox(
                 height: 200,
                 width: double.infinity,
                 child: ListView(
@@ -205,7 +204,7 @@ class _StoryAppState extends State<StoryApp> {
                                                     alignment:
                                                         Alignment.centerLeft,
                                                     child: Padding(
-                                                      padding: EdgeInsets.only(
+                                                      padding:const EdgeInsets.only(
                                                         left: 10,
                                                       ),
                                                       child: Text("Los Angeles",
@@ -220,14 +219,17 @@ class _StoryAppState extends State<StoryApp> {
                                             ),
                                           ),
                                           Container(
-                                            height: 50,
-                                            width: 50,
+                                            height: 40,
+                                            width: 40,
                                             margin: const EdgeInsets.only(
-                                              left: 70,
+                                              left: 50,
                                             ),
                                             child: IconButton(
+                                              splashColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor: Colors.transparent,
                                                 onPressed: () {},
-                                                icon: Icon(
+                                                icon: const Icon(
                                                   Icons.edit,
                                                   color:
                                                       ColorConstant.whiteColor,

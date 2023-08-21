@@ -190,7 +190,7 @@ class BottomsNavigation extends StatelessWidget {
             icon: Column(
               children: [
                 Container(
-                    margin: EdgeInsets.only(
+                    margin:const EdgeInsets.only(
                       top: 15,
                     ),
                     child: const ImageIcon(
@@ -199,16 +199,14 @@ class BottomsNavigation extends StatelessWidget {
                       ),
                       color: ColorConstant.whiteColor,
                     )),
-                Container(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: RichText(
-                        text: TextSpan(
-                      text: "Scan",
-                      style: GoogleFonts.poppins(
-                          textStyle: TextFontConstant.timelinetext),
-                    )),
-                  ),
+                Align(
+                  alignment: Alignment.center,
+                  child: RichText(
+                      text: TextSpan(
+                    text: "Scan",
+                    style: GoogleFonts.poppins(
+                        textStyle: TextFontConstant.timelinetext),
+                  )),
                 ),
               ],
             ),
@@ -219,7 +217,7 @@ class BottomsNavigation extends StatelessWidget {
               icon: Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(
+                    margin:const EdgeInsets.only(
                       top: 15,
                     ),
                     child: const Icon(
@@ -228,16 +226,14 @@ class BottomsNavigation extends StatelessWidget {
                       size: 30,
                     ),
                   ),
-                  Container(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: RichText(
-                          text: TextSpan(
-                        text: "Contacts",
-                        style: GoogleFonts.poppins(
-                            textStyle: TextFontConstant.timelinetext),
-                      )),
-                    ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                        text: TextSpan(
+                      text: "Contacts",
+                      style: GoogleFonts.poppins(
+                          textStyle: TextFontConstant.timelinetext),
+                    )),
                   ),
                 ],
               ),
@@ -248,7 +244,7 @@ class BottomsNavigation extends StatelessWidget {
                 Container(
                   height: 40,
                   width: 40,
-                  margin: EdgeInsets.only(top: 15),
+                  margin:const EdgeInsets.only(top: 15),
                   decoration: BoxDecoration(
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(50),
@@ -283,7 +279,7 @@ class BottomsNavigation extends StatelessWidget {
             icon: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 15),
+                  margin:const EdgeInsets.only(top: 15),
                   child: const Icon(
                     Icons.person_outline,
                     color: ColorConstant.whiteColor,
@@ -293,7 +289,7 @@ class BottomsNavigation extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Menu",
+                    "Profile",
                     style: GoogleFonts.poppins(
                         textStyle: TextFontConstant.timelinetext),
                   ),
@@ -306,7 +302,7 @@ class BottomsNavigation extends StatelessWidget {
             icon: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 16),
+                  margin:const EdgeInsets.only(top: 16),
                   child: const Icon(
                     Icons.menu,
                     color: ColorConstant.whiteColor,
@@ -316,7 +312,7 @@ class BottomsNavigation extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Profile",
+                    "Menu",
                     style: GoogleFonts.poppins(
                         textStyle: TextFontConstant.timelinetext),
                   ),

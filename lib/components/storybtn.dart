@@ -46,7 +46,7 @@ Widget storyButton(StoryData story, BuildContext context) {
                       child: Container(
                         width: 50,
                         height: 50,
-                        margin: EdgeInsets.only(top: 50),
+                        margin:const EdgeInsets.only(top: 50),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50),
                           border: Border.all(
@@ -55,7 +55,7 @@ Widget storyButton(StoryData story, BuildContext context) {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(3),
+                          padding:const EdgeInsets.all(3),
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),

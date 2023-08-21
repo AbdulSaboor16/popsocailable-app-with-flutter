@@ -10,6 +10,7 @@ class AppleLoginButton extends StatefulWidget {
   }) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _AppleLoginButtonState createState() => _AppleLoginButtonState();
 }
 
@@ -25,7 +26,7 @@ class _AppleLoginButtonState extends State<AppleLoginButton> {
           borderRadius: BorderRadius.circular(5),
           border: Border.all(width: 1, color: ColorConstant.whiteColor),
         ),
-        margin: const EdgeInsets.only(left: 20.0, right: 20),
+        margin: const EdgeInsets.only(left: 20.0, right: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

@@ -46,7 +46,7 @@ class _CustomTextFieldEmailState extends State<CustomTextFieldEmail> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorColor: Color.fromARGB(255, 241, 239, 239),
+      cursorColor:const Color.fromARGB(255, 241, 239, 239),
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText,
@@ -87,7 +87,7 @@ class _CustomTextFieldPasswordState extends State<CustomTextFieldPassword> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorColor: Color.fromARGB(255, 241, 239, 239),
+      cursorColor:const Color.fromARGB(255, 241, 239, 239),
       decoration: InputDecoration(
         hintText: widget.hintText,
         labelText: widget.labelText,

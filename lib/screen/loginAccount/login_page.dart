@@ -12,6 +12,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     double width = MediaQuery.of(context).size.width;
 
     return ColorfulSafeArea(
@@ -60,7 +61,7 @@ class LoginPage extends StatelessWidget {
                       height: 50,
                       width: Get.width * .9,
                       // color: Colors.amber,
-                      margin: const EdgeInsets.only(left: 21, right: 20),
+                      margin: const EdgeInsets.only(left: 20, right: 15),
                       child: const CustomTextFieldEmail(
                         hintText: 'Email',
                         labelText: "Enter Email",
@@ -76,7 +77,7 @@ class LoginPage extends StatelessWidget {
                       height: 50,
                       width: Get.width * .9,
                       // color: Colors.amber,
-                      margin: const EdgeInsets.only(left: 21, right: 20),
+                      margin: const EdgeInsets.only(left: 20,right: 15),
                       child: const CustomTextFieldPassword(
                         hintText: 'Password',
                         labelText: "Enter Password",
@@ -100,7 +101,7 @@ class LoginPage extends StatelessWidget {
                                         TextFontConstant.logintextbutton))),
                         height: 50,
                         width: Get.width * .9,
-                        margin: const EdgeInsets.only(left: 21, right: 20),
+                        margin: const EdgeInsets.only(left: 20,right: 15),
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
                             colors: [
@@ -162,7 +163,7 @@ class LoginPage extends StatelessWidget {
                         border: Border.all(
                             width: 1, color: ColorConstant.whiteColor),
                       ),
-                      margin: const EdgeInsets.only(left: 20.0, right: 20),
+                      margin: const EdgeInsets.only(left: 20.0, right: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -206,7 +207,7 @@ class LoginPage extends StatelessWidget {
                         border: Border.all(
                             width: 1, color: ColorConstant.whiteColor),
                       ),
-                      margin: const EdgeInsets.only(left: 20.0, right: 20),
+                      margin: const EdgeInsets.only(left: 20.0, right: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -243,7 +244,7 @@ class LoginPage extends StatelessWidget {
                   Container(
                       height: 35,
                       width: Get.width * .9,
-                      margin: const EdgeInsets.only(left: 21.0, right: 20.0),
+                      margin: const EdgeInsets.only(left: 20.0, right: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -280,7 +281,7 @@ class LoginPage extends StatelessWidget {
                   Container(
                       height: 44,
                       width: Get.width * .9,
-                      margin: EdgeInsets.only(left: 21, right: 20),
+                      margin:const EdgeInsets.only(left: 20,right: 15),
                       child: ElevatedButton(
                         onPressed: () {
                           Get.to(() => const SignupPage());

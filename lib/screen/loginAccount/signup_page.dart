@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:socialapp/bottomtabbarfolder/box.dart';
 import 'package:socialapp/controller/splash_controller.dart';
-import 'package:socialapp/home_page.dart';
 import 'package:socialapp/utils/color_constant.dart';
 import 'package:socialapp/utils/customtextfeild.dart';
 import 'package:socialapp/utils/apple_login_button.dart';
@@ -64,7 +63,7 @@ class SignupPage extends StatelessWidget {
                   Container(
                       height: 50,
                       width: Get.width * .9,
-                      margin: const EdgeInsets.only(left: 21, right: 20),
+                      margin: const EdgeInsets.only(left:20,right:15),
                       child: const CustomTextFieldEmail(
                         hintText: 'Email',
                         labelText: "Enter Email",
@@ -79,7 +78,7 @@ class SignupPage extends StatelessWidget {
                   Container(
                     height: 50,
                     width: Get.width * .9,
-                    margin: const EdgeInsets.only(left: 21, right: 20),
+                    margin: const EdgeInsets.only(left:20,right:15),
                     child: const CustomTextFieldPassword(
                         hintText: 'Password', labelText: "Enter Password"),
                   )
@@ -93,7 +92,7 @@ class SignupPage extends StatelessWidget {
                   Container(
                     height: 50,
                     width: Get.width * .9,
-                    margin: const EdgeInsets.only(left: 21, right: 20),
+                    margin: const EdgeInsets.only(left:20,right:15),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         gradient: const LinearGradient(
@@ -165,7 +164,7 @@ class SignupPage extends StatelessWidget {
                   Container(
                     height: 50,
                     width: Get.width * .9,
-                    margin: const EdgeInsets.only(left: 21, right: 20),
+                    margin: const EdgeInsets.only(left:20,right:15),
                     child: Column(
                       children: [
                         Row(
@@ -218,7 +217,7 @@ class SignupPage extends StatelessWidget {
                   Container(
                       height: 35,
                       width: Get.width * .9,
-                      margin: const EdgeInsets.only(left: 21.0, right: 20.0),
+                      margin: const EdgeInsets.only(left: 20.0, right: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -255,10 +254,10 @@ class SignupPage extends StatelessWidget {
                   Container(
                       height: 44,
                       width: Get.width * .9,
-                      margin: EdgeInsets.only(left: 21, right: 20),
+                      margin:const EdgeInsets.only(left:20,right:15),
                       child: ElevatedButton(
                         onPressed: () {
-                          Get.to(() => BottomsNavigation());
+                          Get.to(() =>const BottomsNavigation());
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: ColorConstant.blueColor,

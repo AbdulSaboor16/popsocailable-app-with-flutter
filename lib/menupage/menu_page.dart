@@ -1,7 +1,5 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
@@ -25,7 +23,7 @@ class MenuPage extends StatelessWidget {
                 child: Center(
                   child: Stack(
                     children: <Widget>[
-                      Container(
+                      SizedBox(
                         width: Get.width,
                         height: Get.height,
                       ),
@@ -46,18 +44,23 @@ class MenuPage extends StatelessWidget {
                           height: Get.height,
                           color: ColorConstant.blueColor,
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const SizedBox(
                                 height: 90,
                               ),
-                              SizedBox(
+                              Container(
+                                alignment: Alignment.center,
                                 height: 30,
                                 width: 150,
-                                child: Text(
-                                  "Kate Williams",
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.poppins(
-                                      textStyle: TextFontConstant.scantext),
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    "Kate Williams",
+                                    textAlign: TextAlign.center,
+                                    style: GoogleFonts.poppins(
+                                        textStyle: TextFontConstant.scantext),
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -159,24 +162,26 @@ class MenuPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
-                        left: 135,
-                        top: 80,
-                        child: Container(
-                          height: 140,
-                          width: 140,
-                          foregroundDecoration: BoxDecoration(
-                            image: const DecorationImage(
-                                image: AssetImage("assets/images/recta.png"),
-                                fit: BoxFit.cover),
-                            // color: const Color.fromARGB(255, 143, 111, 122),
-                            borderRadius: BorderRadius.circular(80),
-                            border: const GradientBoxBorder(
-                              gradient: LinearGradient(colors: [
-                                ColorConstant.lightyellColor,
-                                ColorConstant.darkyellColor,
-                              ]),
-                              width: 2,
+                      Positioned.fill(
+                        top: 85,
+                        child: Align(
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            height: 140,
+                            width: 140,
+                            foregroundDecoration: BoxDecoration(
+                              image: const DecorationImage(
+                                  image: AssetImage("assets/images/recta.png"),
+                                  fit: BoxFit.cover),
+                              // color: const Color.fromARGB(255, 143, 111, 122),
+                              borderRadius: BorderRadius.circular(80),
+                              border: const GradientBoxBorder(
+                                gradient: LinearGradient(colors: [
+                                  ColorConstant.lightyellColor,
+                                  ColorConstant.darkyellColor,
+                                ]),
+                                width: 2,
+                              ),
                             ),
                           ),
                         ),
